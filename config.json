@@ -186,7 +186,7 @@
 		{
 			"tabid": "tab2",
 			"id": "biasLevel",
-			"label": "Site Bias Level",
+			"label": "Article Bias Level",
 			"type": "likert",
 			"options": [
 				["Low Bias"],

@@ -5,44 +5,38 @@
 
 	"disable_google_drive": false,
 
-	"tabs": [
-		{
+	"tabs": [{
 			"id": "tab1",
 			"label": "Section 1",
-			"footer_actions": [
-				{
-					"type": "changetab",
-					"label": "Next",
-					"args": [ "tab2" ]
-				}
-			]
+			"footer_actions": [{
+				"type": "changetab",
+				"label": "Next",
+				"args": ["tab2"]
+			}]
 		},
 		{
 			"id": "tab2",
 			"label": "Section 2",
-			"footer_actions": [
-				{
+			"footer_actions": [{
 					"type": "changetab",
 					"label": "Previous",
-					"args": [ "tab1" ]
+					"args": ["tab1"]
 				},
 				{
 					"type": "changetab",
 					"label": "Next",
-					"args": [ "actions" ]
+					"args": ["actions"]
 				}
 			]
 		},
 		{
 			"id": "actions",
 			"label": "Actions",
-			"footer_actions": [
-				{
-					"type": "changetab",
-					"label": "Previous",
-					"args": [ "tab2" ]
-				}
-			]
+			"footer_actions": [{
+				"type": "changetab",
+				"label": "Previous",
+				"args": ["tab2"]
+			}]
 		}
 	],
 
@@ -89,7 +83,6 @@
 			"type": "text"
 		},
 
-
 		{
 			"tabid": "tab1",
 			"id": "articleAuthor",
@@ -107,53 +100,71 @@
 		{
 			"tabid": "tab1",
 			"id": "modifiedDate",
-			"label": "Dateline or Posted Date",
+			"label": "Dateline or Posted/Modified Date",
 			"type": "text"
 		},
 
 		{
 			"tabid": "tab2",
-			"id": "clickbaitRank",
-			"label": "Clickbait Content",
-			"type": "likert",
-			"options": [
-				["Not Clickbait"],
-				["Some Clickbait Markers"],
-				["Definitely Clickbait"]
-			]
+			"id": "lede",
+			"label": "Lede Paragraph",
+			"type": "textarea",
+			"noRemove": true,
+			"noAdd": true
 		},
 
 		{
 			"tabid": "tab2",
-			"id": "advertisingContent",
-			"label": "Ads/Content Ratio",
-			"type": "likert",
-			"options": [
-				["No Ads"],
-				["1-2 Ads"],
-				["Some Ads"],
-				["Many Ads"],
-				["Too Many Ads"]
-			]
+			"id": "focusClaim",
+			"label": "Focus Claim Summary",
+			"type": "textarea"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "focusClaimLink",
+			"label": "Focus Claim Link(s)",
+			"type": "list"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "aboutLinks",
+			"label": "About Us Link",
+			"type": "text"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "aboutSummary",
+			"label": "About Us Summary",
+			"type": "textarea"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "externalAbout",
+			"label": "Reputation link",
+			"type": "text"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "externalSummary",
+			"label": "Reputation Summary",
+			"type": "textarea"
 		},
 
 		{
 			"tabid": "tab2",
 			"id": "biasLevel",
-			"label": "Article Bias Level",
+			"label": "Site Bias Level",
 			"type": "likert",
 			"options": [
 				["Low Bias"],
 				["Some Bias"],
 				["High Bias"]
 			]
-		},
-
-		{
-			"tabid": "tab2",
-			"id": "mistrustMarkers",
-			"label": "Page Mistrust Markers",
-			"type": "textarea"
 		},
 
 		{
@@ -165,8 +176,15 @@
 
 		{
 			"tabid": "tab2",
+			"id": "mistrustMarkers",
+			"label": "Page Mistrust Markers",
+			"type": "textarea"
+		},
+
+		{
+			"tabid": "tab2",
 			"id": "trustRank",
-			"label": "Rank Overall Trust",
+			"label": "Rank Article Credibility",
 			"type": "likert",
 			"options": [
 				["Full Mistrust"],
@@ -177,19 +195,25 @@
 			]
 		},
 
-
 		{
 			"tabid": "tab2",
 			"id": "assessment",
 			"label": "Why this Rank?",
 			"type": "textarea"
 		},
-		
+
+		{
+			"tabid": "tab2",
+			"id": "questions",
+			"label": "Any Questions for Later?",
+			"type": "textarea"
+		},
+
 		{
 			"tabid": "actions",
 			"id": "action_instructions",
 			"type": "html",
-			"content": "Lesson I <strong>Instructions</strong>"
+			"content": "Lesson II <strong>Instructions</strong>"
 		},
 
 		{
@@ -213,15 +237,14 @@
 			"id": "action_selectconfig",
 			"label": "Select Configuration",
 			"type": "configselector",
-			"options": [
-				{
-					"label": "*Surface",
+			"options": [{
+					"label": "Surface",
 					"url": "/new.json"
 				},
 				{
-					"label": "Thoughtful",
+					"label": "*Thoughtful",
 					"url": "/lateral.json"
-				}, 
+				},
 				{
 					"label": "Detailed",
 					"url": "/config.json"

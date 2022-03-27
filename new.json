@@ -216,15 +216,15 @@
 			"options": [
 				{
 					"label": "*Surface",
-					"url": "/new.json"
+					"url": "https://config.fakenewsfitness.org/new.json"
 				},
 				{
 					"label": "Thoughtful",
-					"url": "/lateral.json"
+					"url": "https://config.fakenewsfitness.org/lateral.json"
 				}, 
 				{
 					"label": "Detailed",
-					"url": "/config.json"
+					"url": "https://config.fakenewsfitness.org/config.json"
 				}
 			]
 		}

@@ -35,7 +35,7 @@
 		},
 		{
 			"id": "actions",
-			"label": "Actions",
+			"label": "Section 3 + Actions",
 			"footer_actions": [
 				{
 					"type": "changetab",
@@ -47,12 +47,6 @@
 	],
 
 	"fields": [
-		{
-			"tabid": "tab1",
-			"id": "studentName",
-			"label": "Student Name",
-			"type": "text"
-		},
 
 		{
 			"tabid": "tab1",
@@ -95,6 +89,12 @@
 			"type": "text"
 		},
 
+		{
+			"tabid": "tab1",
+			"id": "headlineMatch",
+			"label": "Headline Matches Content?",
+			"type": "boolean"
+		},
 
 		{
 			"tabid": "tab1",
@@ -118,50 +118,39 @@
 		},
 
 		{
-			"tabid": "tab2",
-			"id": "headlineMatch",
-			"label": "Headline Matches Content?",
-			"type": "boolean"
+			"tabid": "tab1",
+			"id": "whois",
+			"label": "WHOIS Lookup",
+			"type": "whois",
+			"noRemove": true,
+			"noAdd": true
 		},
 
 		{
-			"tabid": "tab2",
-			"id": "advertisingContent",
-			"label": "Advertising / Content Ratio ( Click one )",
-			"type": "likert",
-			"options": [
-				["No Ads"],
-				["1-2 Ads"],
-				["Some Ads"],
-				["Many Ads"],
-				["Too Many Ads"]
-			]
-		},
-
-		{
-			"tabid": "tab2",
-			"id": "clickbaitRank",
-			"label": "Clickbait Rank ( Click one )",
-			"type": "likert",
-			"options": [
-				["Not Clickbait"],
-				["Some Bait Markers"],
-				["Definitely Clickbait"]
-			]
-		},
-
-		{
-			"tabid": "tab2",
+			"tabid": "tab1",
 			"id": "allLinks",
 			"label": "All Content Links",
 			"type": "linklist"
 		},
 
+		{
+			"tabid": "tab2",
+			"id": "lede",
+			"label": "Lede Paragraph",
+			"type": "textarea"
+		},
 
 		{
 			"tabid": "tab2",
-			"id": "claimEvidence",
-			"label": "Claim Evidence Link(s)",
+			"id": "focusClaim",
+			"label": "Focus Claim Summary",
+			"type": "textarea"
+		},
+
+		{
+			"tabid": "tab2",
+			"id": "focusClaimLink",
+			"label": "Focus Claim Link(s)",
 			"type": "list"
 		},
 
@@ -181,12 +170,18 @@
 
 		{
 			"tabid": "tab2",
-			"id": "whois",
-			"label": "WHOIS Lookup",
-			"type": "whois",
-			"noRemove": true,
-			"noAdd": true
+			"id": "externalAbout",
+			"label": "Reputation link",
+			"type": "text"
 		},
+
+		{
+			"tabid": "tab2",
+			"id": "externalSummary",
+			"label": "Reputation Summary",
+			"type": "textarea"
+		},
+
 
 		{
 			"tabid": "tab2",
@@ -214,22 +209,49 @@
 			]
 		},
 
+
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
+			"id": "advertisingContent",
+			"label": "Advertising / Content Ratio ( Click one )",
+			"type": "likert",
+			"options": [
+				["No Ads"],
+				["1-2 Ads"],
+				["Some Ads"],
+				["Many Ads"],
+				["Too Many Ads"]
+			]
+		},
+
+		{
+			"tabid": "actions",
+			"id": "clickbaitRank",
+			"label": "Clickbait Rank ( Click one )",
+			"type": "likert",
+			"options": [
+				["Not Clickbait"],
+				["Some Bait Markers"],
+				["Definitely Clickbait"]
+			]
+		},
+
+		{
+			"tabid": "actions",
 			"id": "trustMarkers",
 			"label": "Page Trust Markers",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "mistrustMarkers",
 			"label": "Page Mistrust Markers",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "trustRank",
 			"label": "Rank Article Credibility",
 			"type": "likert",
@@ -242,22 +264,19 @@
 			]
 		},
 
-		
-
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "assessment",
 			"label": "Why this Rank?",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "questions",
 			"label": "Any Questions for Later?",
 			"type": "textarea"
 		},
-
 
 		{
 			"tabid": "actions",
@@ -287,18 +306,17 @@
 			"id": "action_selectconfig",
 			"label": "Select Configuration",
 			"type": "configselector",
-			"options": [
-				{
+			"options": [{
 					"label": "Surface",
-					"url": "/new.json"
+					"url": "https://config.fakenewsfitness.org/new.json"
 				},
 				{
 					"label": "Thoughtful",
-					"url": "/thoughtful.json"
-				}, 
+					"url": "https://config.fakenewsfitness.org/lateral.json"
+				},
 				{
-					"label": "Detailed",
-					"url": "/config.json"
+					"label": "*Detailed",
+					"url": "https://config.fakenewsfitness.org/config.json"
 				}
 			]
 		}

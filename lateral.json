@@ -31,7 +31,7 @@
 		},
 		{
 			"id": "actions",
-			"label": "Actions",
+			"label": "Section 3 + Actions",
 			"footer_actions": [{
 				"type": "changetab",
 				"label": "Previous",
@@ -85,6 +85,13 @@
 
 		{
 			"tabid": "tab1",
+			"id": "headlineMatch",
+			"label": "Headline Matches Content?",
+			"type": "boolean"
+		},
+
+		{
+			"tabid": "tab1",
 			"id": "articleAuthor",
 			"label": "Article Author",
 			"type": "text"
@@ -108,9 +115,7 @@
 			"tabid": "tab2",
 			"id": "lede",
 			"label": "Lede Paragraph",
-			"type": "textarea",
-			"noRemove": true,
-			"noAdd": true
+			"type": "textarea"
 		},
 
 		{
@@ -168,21 +173,21 @@
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "trustMarkers",
 			"label": "Page Trust Markers",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "mistrustMarkers",
 			"label": "Page Mistrust Markers",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "trustRank",
 			"label": "Rank Article Credibility",
 			"type": "likert",
@@ -196,14 +201,14 @@
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "assessment",
 			"label": "Why this Rank?",
 			"type": "textarea"
 		},
 
 		{
-			"tabid": "tab2",
+			"tabid": "actions",
 			"id": "questions",
 			"label": "Any Questions for Later?",
 			"type": "textarea"
@@ -239,15 +244,15 @@
 			"type": "configselector",
 			"options": [{
 					"label": "Surface",
-					"url": "/new.json"
+					"url": "https://config.fakenewsfitness.org/new.json"
 				},
 				{
 					"label": "*Thoughtful",
-					"url": "/lateral.json"
+					"url": "https://config.fakenewsfitness.org/lateral.json"
 				},
 				{
 					"label": "Detailed",
-					"url": "/config.json"
+					"url": "https://config.fakenewsfitness.org/config.json"
 				}
 			]
 		}
